@@ -6,7 +6,7 @@ os.chdir(os.path.dirname(os.path.realpath(__file__)))
 # Build setup
 setup(
     name='dicgan',
-    version='1.0.0',
+    version='1.0.1',
     packages=['dicgan'],
     license='MIT License',
     author='Cheng Ma',
@@ -16,7 +16,16 @@ setup(
     setup_requires=[
         'setuptools>=18.0'
     ],
-    package_data={},
+    package_data={
+        'dicgan': [
+            'data/*',
+            'networks/*',
+            'networks/modules/*',
+            'options/*',
+            'solvers/*',
+            'utils/*',
+        ]
+    },
     install_requires=[],  # requirements.txt is included
     include_package_data=True,
 )
