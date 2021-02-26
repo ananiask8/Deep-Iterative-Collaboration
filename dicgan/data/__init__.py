@@ -16,13 +16,13 @@ def create_dataloader(dataset, dataset_opt):
 def create_dataset(dataset_opt):
     mode = dataset_opt['mode'].upper()
     if mode == 'LRHR':
-        from data.LRHRDataset import LRHRDataset as D
+        from data import LRHRDataset as D
     elif mode == 'LR':
-        from data.LRDataset import LRDataset as D
+        from data import LRDataset as D
     elif mode == 'HRLANDMARK':
-        from data.HRLandmarkDataset import HRLandmarkDataset as D
+        from data import HRLandmarkDataset as D
     elif mode == 'HRLANDMARKBLUR':
-        from data.HRLandmarkBlurDataset import HRLandmarkBlurDataset as D
+        from data import HRLandmarkBlurDataset as D
     else:
         raise NotImplementedError("Dataset [%s] is not recognized." % mode)
     dataset = D(dataset_opt)

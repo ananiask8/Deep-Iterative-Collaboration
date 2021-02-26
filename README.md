@@ -45,7 +45,7 @@ To train a model:
 cd code
 python train.py -opt options/train/train_(DIC|DICGAN)_(CelebA|Helen).json
 ```
-- The json file will be processed by `options/options.py`. Please refer to [this](./code/options/train/README.md) for more details.
+- The json file will be processed by `options/options.py`. Please refer to [this](dicgan/options/train/README.md) for more details.
 
 - Before running this code, please modify option files to your own configurations including: 
   - proper `dataroot_HR` and `dataroot_LR` paths for the data loader
@@ -70,7 +70,7 @@ cd code
 python test.py -opt options/test/test_(DIC|DICGAN)_(CelebA|Helen).json
 ```
 
-- Similar to training, the configurations can be modified in the json file. Please refer to [this](./code/options/test/README.md) for more details.
+- Similar to training, the configurations can be modified in the json file. Please refer to [this](dicgan/options/test/README.md) for more details.
 - You can find your results in `results/{test_name}/{dataset_name}`. The **PSNR** and **SSIM** values will be stored in `result.json` while the average results will be recorded in `average_result.txt`
 - We provide our **DIC** and **DICGAN** models used in our paper that can be downloaded in the `models` folder from [Google Drive](https://drive.google.com/open?id=1Q1T1smMDRMO1NcjkxbZvotOX93YIVp5e) or [Baidu Drive](https://pan.baidu.com/s/14zJ_lY8iFmk3csHYZmut7Q) (extraction code: 6qhx). Then you can modify the directory of pretrained model and LR image sets in option files and run `test.py` for a quick test. 
 - **Please use png images as input!**
